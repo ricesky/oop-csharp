@@ -3,7 +3,7 @@
 **Kelas dan Objek**
 
 1. **Objek**
-   Objek adalah entitas yang memiliki atribut (seperti warna, kecepatan, bentuk) dan perilaku (seperti akselerasi dan deselerasi). Dalam C#, objek diciptakan dari template kelas, yang mendefinisikan atribut dan perilaku objek tersebut.
+   Objek adalah entitas yang memiliki atribut (seperti warna, kecepatan, bentuk), state (seperti nilai dari warna, berapa kecepatan saat ini, bentuk saat ini), dan perilaku (seperti akselerasi dan deselerasi). Dalam C#, objek diciptakan dari template kelas, yang mendefinisikan atribut dan perilaku objek tersebut.
 
 2. **Kelas**
    Kelas adalah blueprint atau template yang mendefinisikan atribut dan perilaku untuk objek. Seperti mobil dalam sebuah garasi, kelas mendefinisikan atribut umum (roda, pintu, jendela) dan perilaku (berpindah tempat, akselerasi, berhenti).
