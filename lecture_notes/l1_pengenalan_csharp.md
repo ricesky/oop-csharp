@@ -1,5 +1,4 @@
 ### Lecture Notes #1
-Mata kuliah: Pemrograman Berorientasi Objek  
 
 #### Pengenalan C# dan Kompilasi menggunakan C# Compiler
 
