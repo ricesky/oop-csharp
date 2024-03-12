@@ -3,6 +3,7 @@
 **Kelas dan Objek**
 
 **Enkapsulasi (Encapsulation)**
+
 Enkapsulasi adalah salah satu dari empat prinsip utama dalam pemrograman berorientasi objek (OOP). Konsep ini merujuk pada pengemasan data (variabel) dan fungsi (metode) yang bekerja pada data tersebut ke dalam satu unit atau kelas. Enkapsulasi memungkinkan suatu objek untuk menyembunyikan detil internal dari objek tersebut terhadap objek lain, sehingga hanya menampilkan operasi yang diizinkan.
 
 Dengan enkapsulasi, kita bisa:
@@ -11,6 +12,7 @@ Dengan enkapsulasi, kita bisa:
 - Membuat kode lebih mudah untuk dijaga dan dikelola.
 
 **Penyembunyian Data (Data Hiding)**
+
 Penyembunyian data adalah sebuah teknik dalam enkapsulasi yang membatasi akses langsung ke beberapa komponen objek. Ini biasanya diimplementasikan dengan menggunakan hak akses seperti `private`, `protected`, dan `public`. 
 
 Dalam C#, `private` adalah level akses yang paling membatasi, di mana anggota hanya bisa diakses dari dalam kelas itu sendiri. Ini adalah cara efektif untuk menyembunyikan data dan hanya memperbolehkan akses melalui metode yang didefinisikan dalam kelas, yang sering disebut sebagai *accessor* (untuk membaca data) dan *mutator* (untuk mengubah data).
@@ -84,6 +86,7 @@ class Program
 Dalam contoh di atas, variabel `balance` adalah private, sehingga tidak dapat diakses atau dimodifikasi langsung dari luar kelas `Account`. Sebagai gantinya, kelas menyediakan metode `GetBalance`, `Deposit`, dan `Withdraw` untuk berinteraksi dengan `balance`. Ini adalah contoh dari enkapsulasi dan penyembunyian data.
 
 **Access Modifier (Pengubah Akses)**
+
 Dalam C#, hak akses atau *access modifier* mengontrol level visibilitas anggota kelas (variabel, properti, metode, dan konstruktor) kepada kode lain. Berikut adalah hak akses yang tersedia di C#:
 
 - `public`: Anggota dapat diakses dari kode manapun dalam assembly atau assembly lain yang merujuknya.
