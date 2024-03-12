@@ -82,3 +82,79 @@ class Program
 ```
 
 Dalam contoh di atas, variabel `balance` adalah private, sehingga tidak dapat diakses atau dimodifikasi langsung dari luar kelas `Account`. Sebagai gantinya, kelas menyediakan metode `GetBalance`, `Deposit`, dan `Withdraw` untuk berinteraksi dengan `balance`. Ini adalah contoh dari enkapsulasi dan penyembunyian data.
+
+**Access Modifier (Pengubah Akses)**
+Dalam C#, hak akses atau *access modifier* mengontrol level visibilitas anggota kelas (variabel, properti, metode, dan konstruktor) kepada kode lain. Berikut adalah hak akses yang tersedia di C#:
+
+- `public`: Anggota dapat diakses dari kode manapun dalam assembly atau assembly lain yang merujuknya.
+- `private`: Anggota hanya dapat diakses dari dalam kelas atau struktur tempat mereka dideklarasikan.
+- `protected`: Anggota hanya dapat diakses dari dalam kelas tempat mereka dideklarasikan, serta oleh turunan dari kelas tersebut.
+- `internal`: Anggota dapat diakses oleh kode apa pun dalam assembly yang sama, tetapi tidak dari assembly lain.
+- `protected internal`: Anggota dapat diakses oleh kode apa pun dalam assembly yang sama, atau oleh turunan dari kelas dalam assembly lain.
+- `private protected`: Anggota hanya dapat diakses oleh kelas yang mengandung anggota tersebut, atau oleh kelas turunan yang terletak dalam assembly yang sama.
+
+Penggunaan `access modifier` ini memungkinkan pengembang untuk lebih mengontrol bagaimana properti dan metode suatu objek diakses dan dimodifikasi. Dengan mengontrol akses ini, dapat ditegakkan prinsip enkapsulasi yang lebih baik.
+
+**Contoh Kode dalam C#:**
+
+```csharp
+public class Employee
+{
+    // Data yang disimpan secara private
+    private int id;
+    private string name;
+    protected decimal salary;
+
+    // Konstruktor untuk inisialisasi data
+    public Employee(int id, string name, decimal salary)
+    {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    // Metode publik untuk mengakses data karyawan
+    public string GetName()
+    {
+        return name;
+    }
+
+    // Metode internal untuk bekerja dengan gaji
+    internal void RaiseSalary(decimal percentage)
+    {
+        if (percentage > 0)
+        {
+            salary += salary * percentage / 100;
+        }
+    }
+
+    // Metode protected yang mungkin digunakan dalam turunan kelas Employee
+    protected decimal CalculateBonus(decimal percentage)
+    {
+        return salary * percentage / 100;
+    }
+}
+
+public class Manager : Employee
+{
+    public Manager(int id, string name, decimal salary) : base(id, name, salary)
+    {
+    }
+
+    public void IncreaseSubordinateSalary(Employee employee, decimal percentage)
+    {
+        if (employee is Manager)
+        {
+            // Hanya Manager yang dapat menaikkan gaji Manager lain
+            employee.RaiseSalary(percentage);
+        }
+    }
+}
+```
+
+Pada contoh di atas, kita dapat melihat bagaimana `private`, `protected`, dan `internal` access modifiers digunakan untuk membatasi akses ke anggota kelas `Employee`. Kelas `Manager`, yang mewarisi dari `Employee`, dapat mengakses anggota yang `protected` seperti `salary`, tetapi tidak dapat mengakses anggota yang `private` dari `Employee` seperti `id` dan `name`.
+
+Penggunaan access modifier memastikan bahwa hanya metode yang sesuai yang dapat mengakses dan memodifikasi data, melindungi objek dari perubahan yang tidak diinginkan dan tidak aman dari kode luar. Ini adalah prinsip enkapsulasi yang sangat penting dalam membangun aplikasi yang aman dan mudah untuk dipelihara.
+
+Referensi: 
+- [Access Modifiers in C#](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)
