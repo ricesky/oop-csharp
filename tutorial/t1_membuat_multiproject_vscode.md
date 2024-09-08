@@ -81,7 +81,7 @@ dotnet sln add HelloLibrary/HelloLibrary.csproj
 ```
 
 ### Langkah 7: Buat Kelas HelloPrinter di HelloLibrary
-Sekarang, kita perlu memodifikasi **HelloLibrary** untuk menambahkan kelas `HelloPrinter`. Buka file `Class1.cs` di **HelloLibrary** dan ubah isinya menjadi seperti ini:
+Sekarang, kita perlu memodifikasi **HelloLibrary** untuk menambahkan kelas `HelloPrinter`. Buka file `Class1.cs` di **HelloLibrary**, ubah namanya menjadi `HelloPrinter.cs` dan ubah isinya menjadi seperti ini:
 
 ```csharp
 namespace HelloLibrary
@@ -146,4 +146,4 @@ Hello, World!
 ```
 
 ### Kesimpulan
-Anda telah berhasil membuat solusi **HelloWorld** yang berisi dua proyek: **HelloConsole** sebagai aplikasi konsol, dan **HelloLibrary** sebagai library dengan metode `SayHello` di kelas `HelloPrinter`. **HelloConsole** memanggil metode dari **HelloLibrary** untuk menampilkan pesan "Hello, World!" di konsol.
+Anda telah berhasil membuat solusi **HelloWorld** yang berisi dua proyek: **HelloConsole** sebagai aplikasi konsol, dan **HelloLibrary** sebagai library dengan metode `SayHello` di kelas `HelloPrinter`. **HelloConsole** memanggil metode dari **HelloLibrary** untuk menampilkan pesan "Hello, World!" di konsol. Perhatikan pula di folder bin di masing-masing proyek, untuk tipe proyek konsol ada file executable, tetapi untuk tipe proyek class library hanya terdapat file .dll.
