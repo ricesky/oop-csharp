@@ -29,7 +29,6 @@ HelloWorldSolution/
   - `HelloLibrary/`: Proyek Class Library.
     - `HelloLibrary.csproj`: File proyek untuk HelloLibrary.
     - `HelloPrinter.cs`: File kelas `HelloPrinter` yang berisi metode `SayHello`.
-```
 
 ### Langkah 1: Persiapkan Lingkungan
 Pastikan Anda telah menginstal .NET SDK dan Visual Studio Code. Untuk memeriksa apakah .NET SDK telah terpasang, jalankan perintah ini di terminal:
